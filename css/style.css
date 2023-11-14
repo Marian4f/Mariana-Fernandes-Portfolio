@@ -4,17 +4,17 @@ html, body {
 }
 
 body {
-    background-color: #2b2b2b;
+    background-color: #550b70;
     font-family: Montserrat, sans-serif;
 }
 
 .navigation {
-    background-color: #2b2b2b;
+    
     color: white;
     height: 56px;
 
     animation-name: navegacao;
-    animation-duration: 4s;
+    animation-duration: 1.5s;
 }
 
 .navigation a {
@@ -23,7 +23,7 @@ body {
 }
 
 .navigation a:hover {
-    color: #f27609;
+    color: #cc6fee;
 }
 
 .navigation ul {
@@ -53,7 +53,7 @@ body {
 }
 
 .capa span {
-    color: #f27609;
+    color: #cc6fee;
     display: block;
 }
 
@@ -235,6 +235,7 @@ body {
 
 .redes ul{
     display: flex;
+    list-style: none;
 }
 .redes ul a{
     display: block;
