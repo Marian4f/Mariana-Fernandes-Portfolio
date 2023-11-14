@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background-color: #550b70;
+    background-color: #550a70;
     font-family: Montserrat, sans-serif;
 }
 
@@ -129,7 +129,7 @@ body {
 
 
 .main h3 {
-    color: #f27609;
+    color: #cc6fee;
     font-size: 12px;
 }
 
@@ -139,6 +139,11 @@ body {
     font-weight: 100;
     line-height: 24px;
     text-align: justify;
+}
+.main a{
+    color: #cc6fee;
+    text-decoration:none;
+
 }
 
 .caminho {
@@ -232,15 +237,28 @@ body {
     width: 100%;
     padding: 0;
 }
-
-.redes ul{
+.redes ul {
+    margin: 0;
+    padding: 0;
     display: flex;
     list-style: none;
 }
-.redes ul a{
+
+.redes ul a {
     display: block;
     padding: 10px;
 }
-.redes ul li a img{
+
+.redes ul li a img {
     max-width: 70px;
+    margin: 0; /* Remover a margem ao redor das imagens */
+}
+.redes ul li a img {
+    max-width: 70px;
+    margin: 0;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.redes ul li a img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho da imagem ao passar o mouse */
 }
