@@ -6,6 +6,7 @@ html, body {
 body {
     background-color: #550a70;
     font-family: Montserrat, sans-serif;
+    overflow: hidden;
 }
 
 .navigation {
@@ -261,4 +262,87 @@ body {
 
 .redes ul li a img:hover {
     transform: scale(1.2); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+.projetos {
+    padding: 4%;
+    display: flex;
+}
+
+.img,
+.img1 {
+    width: 25rem;
+    height: 20rem;
+    margin: 0 0.5rem 0 0.5rem;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.img {
+    background-image:url(../img/3.png) ;
+}
+
+.img1 {
+    background-image: url(../img/2.png);
+}
+
+.img:hover .text,
+.img1:hover .text1 {
+    opacity: 1; 
+}
+
+.text {
+    text-align: center;
+    padding:  6.5rem 13.4rem 6rem 12.5rem;
+    margin: 0px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .2s linear;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.text1 {
+    text-align: center;
+    padding: 6.5rem 13.4rem 6rem 12.5rem;
+    margin: 0px;
+    opacity: 0;
+    position: fixed;
+    transition: opacity .2s linear;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+/* Estilo para os botões de próxima e anterior */
+.btn1, .btn2 {
+    background-color: #cc6fee;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px; /* Adiciona margem para espaçamento entre os botões */
+    display: inline-block; /* Permite que os botões fiquem lado a lado */
+    font-family: cursive;
+}
+
+.btn1:hover, .btn2:hover {
+    background-color: #834599;
+}
+
+.imgprojeto-container {
+    overflow:visible;
+    position: initial;
+    width: 50px; /* Ajuste conforme necessário */
+    height: 25rem; /* Ajuste conforme necessário */
+    margin: 10px; /* Centraliza ocontainer */
+}
+
+.imgprojeto {
+    display: flex;
+    width: 50%; /* Ajuste conforme necessário para acomodar todas as imagens */
+    transition: transform 0.2s ease; /* Adiciona transição suave para a rolagem */
+}
+
+.imgprojeto img {
+    width: 40rem;
+    height: 25rem;
 }
