@@ -6,7 +6,7 @@ html, body {
 body {
     background-color: #550a70;
     font-family: Montserrat, sans-serif;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .navigation {
@@ -101,10 +101,10 @@ body {
 .main {
     padding: 40px 180px 80px 100px;
 
-    /*padding-top: 40px;
+    padding-top: 40px;
     padding-right: 180px;
     padding-bottom: 80px;
-    padding-left: 100px;*/
+    padding-left: 100px;
 }
 
 .cv-pic {
@@ -244,7 +244,6 @@ body {
     display: flex;
     list-style: none;
 }
-
 .redes ul a {
     display: block;
     padding: 10px;
@@ -267,16 +266,51 @@ body {
     padding: 4%;
     display: flex;
 }
-
 .img,
 .img1 {
-    width: 25rem;
-    height: 20rem;
-    margin: 0 0.5rem 0 0.5rem;
+    width: 500px;
+    height: 500px;
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
+.proj li {
+    position: relative;
 
+}
+.proj img {
+    width: 700px;
+    height: auto;
+    padding: 10px;
+}
+
+.proj li:hover img {
+    filter: brightness(30%);
+}
+.proj figcaption {
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    color: whitesmoke;
+    background-color: #7a5986;
+    font-size: 19px;
+    font-weight: lighter;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 12px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.proj li:hover figcaption {
+    opacity: 50 ;
+}
+
+
+/* 
 .img {
     background-image:url(../img/3.png) ;
 }
@@ -288,16 +322,7 @@ body {
 .img:hover .text,
 .img1:hover .text1 {
     opacity: 1; 
-}
-
-.text {
-    text-align: center;
-    padding:  6.5rem 13.4rem 6rem 12.5rem;
-    margin: 0px;
-    opacity: 0;
-    position: absolute;
-    transition: opacity .2s linear;
-    background-color: rgba(0, 0, 0, .7);
+    box-shadow: #550a70
 }
 
 .text1 {
@@ -308,9 +333,8 @@ body {
     position: fixed;
     transition: opacity .2s linear;
     background-color: rgba(0, 0, 0, .7);
-}
+} */
 
-/* Estilo para os botões de próxima e anterior */
 .btn1, .btn2 {
     background-color: #cc6fee;
     color: white;
@@ -319,8 +343,8 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin: 10px; /* Adiciona margem para espaçamento entre os botões */
-    display: inline-block; /* Permite que os botões fiquem lado a lado */
+    margin: 10px; 
+    display: inline-block; 
     font-family: cursive;
 }
 
@@ -331,18 +355,78 @@ body {
 .imgprojeto-container {
     overflow:visible;
     position: initial;
-    width: 50px; /* Ajuste conforme necessário */
-    height: 25rem; /* Ajuste conforme necessário */
-    margin: 10px; /* Centraliza ocontainer */
+    width: 100px; 
+    height: 100px; 
+    margin: 10px; 
 }
 
 .imgprojeto {
     display: flex;
-    width: 50%; /* Ajuste conforme necessário para acomodar todas as imagens */
-    transition: transform 0.2s ease; /* Adiciona transição suave para a rolagem */
+    width: 50%; 
+    transition: transform 0.2s ease; 
 }
-
 .imgprojeto img {
-    width: 40rem;
-    height: 25rem;
+    width: 500px;
+    height: 500px;
+}
+/* Adicione regras de media query para dispositivos com largura máxima de 414 pixels (iPhone XR em modo retrato) */
+@media only screen and (max-width: 414px) {
+
+    .main {
+        padding: 20px; /* Ajusta o espaçamento dentro da área principal */
+    }
+
+    .profile-pic img {
+        max-width: 100%; /* Garante que a imagem do perfil se ajuste à largura da tela */
+    }
+
+    .profile-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-title h1 {
+        font-size: 28px; /* Reduz o tamanho da fonte do título */
+        margin-top: 10px;
+    }
+
+    .caminho {
+        padding: 10px; /* Ajusta o espaçamento nos itens do caminho */
+    }
+
+    .redes {
+        text-align: center;
+    }
+
+    .redes ul {
+        justify-content: center; /* Centraliza as redes sociais */
+    }
+
+    .redes ul li {
+        margin: 0 10px; /* Adiciona margem entre os ícones das redes sociais */
+    }
+
+    .proj li {
+        width: 50%; /* Garante que as imagens dos projetos ocupem toda a largura */
+    }
+
+    .proj img {
+        width: 350px;
+    }
+    .proj li {
+        width: 300px; /* Garante que as imagens dos projetos ocupem toda a largura */
+        margin-bottom: 20px; /* Adiciona margem inferior entre os projetos */
+    }
+
+    .proj img {
+        width:; /* Garante que as imagens ocupem 100% da largura da área do projeto */
+        height: ; /* Mantém a proporção original da imagem */
+    }
+    .proj figcaption {
+        font-size: 14px; /* Reduz o tamanho da fonte da legenda */
+    }
+    .imgprojeto img {
+        width: 250px;
+        height: 250px;
+    }
 }

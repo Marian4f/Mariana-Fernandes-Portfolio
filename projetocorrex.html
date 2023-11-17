@@ -2,89 +2,87 @@
 
 <html>
 
-	<head>
-		<title>Correx - Mariana Fernandes</title>
+<head>
+	<title>Correx - Mariana Fernandes</title>
 
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
-		<script type="text/javascript" src="js/script.js"></script>
-	</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
 
 
-	<body>
-		<div id="navigation" class="navigation">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="portfolio.html">Portfolio</a></li>
-				<li><a href="curriculo.html">Curriculo</a></li>
-                <li><a href="contato.html">Contato</a></li>
-				<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
-			</ul>
-		</div>	
-			<div class="main">
-					
-				<ul class="caminho">
-					<li><a href="index.html">Home</a></li>
-                    <li>></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-					<li>></li>
-					<li>Correx</li>
-				</ul>
-                <div class="imgprojeto">
-                    <img src="./img/facebook.png" alt="Tela de carregamento">
-                    <img src="./img/github.png" alt="Tela de Login">
-                    <img src="./img/instagram.png" alt="Tela de Login">
-                    <img src="./img/linkedin.png" alt="Tela de Login">
-                    <img src="./img/5.png" alt="Tela de Login">
-                </div>
-				<button class="btn1">Anterior</button>
-				<button class="btn2">Próxima</button>
-                <div class="description">
-                    <h2>Descrição do Projeto</h2>
-                    <p>É um projeto da disciplina de programação web da FATEC, tem como fu</p>
-                    <h2>Tecnologias Usadas</h2>
-                    <p>C# e MySQL</p>
-                </div>
-        
-                <a href="#" class="back">Voltar ao início<a></a>
-            </div>
-				<a href="index.html">Voltar ao início<a>
-			</div>
-			<script>
-				document.addEventListener("DOMContentLoaded", function () {
-					const container = document.querySelector('.imgprojeto-container');
-					const images = document.querySelectorAll('.imgprojeto img');
-					let currentIndex = 0;
-		
-					function showImage(index) {
-						// Oculta todas as imagens
-						images.forEach(img => img.style.display = 'none');
-						// Exibe a imagem atual
-						images[index].style.display = 'block';
-					}
-		
-					function nextImage() {
-						currentIndex = (currentIndex + 1) % images.length;
-						showImage(currentIndex);
-					}
-		
-					function prevImage() {
-						currentIndex = (currentIndex - 1 + images.length) % images.length;
-						showImage(currentIndex);
-					}
-		
-					// Exibe a primeira imagem ao carregar a página
-					showImage(currentIndex);
-		
-					// Adiciona eventos de clique para os botões de próxima e anterior
-					document.querySelector('.btn2').addEventListener('click', nextImage);
-					document.querySelector('.btn1').addEventListener('click', prevImage);
-				});
-			</script>
-	</body>
-	
-	</html>
+<body>
+	<div id="navigation" class="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="curriculo.html">Curriculo</a></li>
+			<li><a href="contato.html">Contato</a></li>
+			<li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776;</li>
+		</ul>
+	</div>
+	<div class="main">
+
+		<ul class="caminho">
+			<li><a href="index.html">Home</a></li>
+			<li>></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li>></li>
+			<li>Correx</li>
+		</ul>
+		<h1>Projeto Correx</h1>
+		<div class="imgprojeto">
+			<img src="./img/facebook.png" alt="Tela de carregamento">
+			<img src="./img/github.png" alt="Tela de Login">
+			<img src="./img/instagram.png" alt="Tela de Login">
+			<img src="./img/linkedin.png" alt="Tela de Login">
+			<img src="./img/5.png" alt="Tela de Login">
+		</div>
+		<button class="btn1">Anterior</button>
+		<button class="btn2">Próxima</button>
+		<div class="description">
+			<h2>Descrição do Projeto</h2>
+			<p>É um projeto da disciplina de programação web da FATEC, tem como fu</p>
+			<h2>Tecnologias Usadas</h2>
+			<p>C# e MySQL</p>
+		</div>
+		<a href="index.html">Voltar ao início<a>
+	</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const container = document.querySelector('.imgprojeto-container');
+			const images = document.querySelectorAll('.imgprojeto img');
+			let currentIndex = 0;
+
+			function showImage(index) {
+				// Oculta todas as imagens
+				images.forEach(img => img.style.display = 'none');
+				// Exibe a imagem atual
+				images[index].style.display = 'block';
+			}
+
+			function nextImage() {
+				currentIndex = (currentIndex + 1) % images.length;
+				showImage(currentIndex);
+			}
+
+			function prevImage() {
+				currentIndex = (currentIndex - 1 + images.length) % images.length;
+				showImage(currentIndex);
+			}
+
+			// Exibe a primeira imagem ao carregar a página
+			showImage(currentIndex);
+
+			// Adiciona eventos de clique para os botões de próxima e anterior
+			document.querySelector('.btn2').addEventListener('click', nextImage);
+			document.querySelector('.btn1').addEventListener('click', prevImage);
+		});
+	</script>
+</body>
+
+</html>
