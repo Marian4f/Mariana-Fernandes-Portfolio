@@ -308,33 +308,6 @@ body {
 .proj li:hover figcaption {
     opacity: 50 ;
 }
-
-
-/* 
-.img {
-    background-image:url(../img/3.png) ;
-}
-
-.img1 {
-    background-image: url(../img/2.png);
-}
-
-.img:hover .text,
-.img1:hover .text1 {
-    opacity: 1; 
-    box-shadow: #550a70
-}
-
-.text1 {
-    text-align: center;
-    padding: 6.5rem 13.4rem 6rem 12.5rem;
-    margin: 0px;
-    opacity: 0;
-    position: fixed;
-    transition: opacity .2s linear;
-    background-color: rgba(0, 0, 0, .7);
-} */
-
 .btn1, .btn2 {
     background-color: #cc6fee;
     color: white;
